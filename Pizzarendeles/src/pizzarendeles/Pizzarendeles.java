@@ -99,6 +99,11 @@ public class Pizzarendeles extends javax.swing.JFrame {
 
         buttonGroup2.add(btnsima);
         btnsima.setText("Sima");
+        btnsima.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                btnsimaItemStateChanged(evt);
+            }
+        });
 
         buttonGroup2.add(btnvekony);
         btnvekony.setText("Vékony");
@@ -325,23 +330,41 @@ public class Pizzarendeles extends javax.swing.JFrame {
     }//GEN-LAST:event_btnmegseActionPerformed
 
     private void btnrendelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrendelesActionPerformed
-        
+
         boolean mennyiseg = cmbmenny.getSelectedIndex() < 1 ;
         String uzenet, cim = "FIGYELEM!";
         if(mennyiseg){
             uzenet = "Válassz mennyiséget!";
             int ikontipus = JOptionPane.ERROR_MESSAGE;
             JOptionPane.showMessageDialog(null, uzenet, cim, ikontipus);
+            
+           
         }
+        
      
         else{
+            String lakcim = txtlak.getText();
+            String telefon = txttel.getText();
             cim = "Köszönjük!";
             String osszeg = "A pizza 2499 Ft-ba kerül!";
-            uzenet = "Rendelését felvettük!"+"\n" + osszeg ;
+            uzenet = "Rendelését felvettük!"+"\n" + lakcim +"\n" + telefon +"\n" + osszeg ;
             int ikontipus = JOptionPane.INFORMATION_MESSAGE;
             JOptionPane.showMessageDialog(null, uzenet, cim, ikontipus);
         }
+     
+     
     }//GEN-LAST:event_btnrendelesActionPerformed
+
+    private void btnsimaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_btnsimaItemStateChanged
+        String cim = "FIGYELEM!";
+        {
+        if (btnsima.isSelected())
+            cim = "FIGYELEM!";
+        String uzenet = "Sima tészta kiválasztva!";
+        int ikontipus = JOptionPane.INFORMATION_MESSAGE;
+        JOptionPane.showMessageDialog(null, uzenet, cim, ikontipus);
+    }
+    }//GEN-LAST:event_btnsimaItemStateChanged
 
     /**
      * @param args the command line arguments

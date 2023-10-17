@@ -237,6 +237,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Sima"/>
           </Properties>
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="btnsimaItemStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="btnvekony">
           <Properties>
