@@ -98,7 +98,6 @@ public class Pizzarendeles extends javax.swing.JFrame {
         pnltetszta.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tészta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Serif", 0, 14))); // NOI18N
 
         buttonGroup2.add(btnsima);
-        btnsima.setSelected(true);
         btnsima.setText("Sima");
 
         buttonGroup2.add(btnvekony);
@@ -133,7 +132,6 @@ public class Pizzarendeles extends javax.swing.JFrame {
 
         pnlfeltet.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Feltét", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Serif", 0, 14))); // NOI18N
 
-        btnsonka.setSelected(true);
         btnsonka.setText("Sonka");
         btnsonka.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
@@ -168,7 +166,6 @@ public class Pizzarendeles extends javax.swing.JFrame {
         pnlszosz.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Szósz", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Serif", 0, 14))); // NOI18N
 
         buttonGroup1.add(btnbarbec);
-        btnbarbec.setSelected(true);
         btnbarbec.setLabel("Barbecue");
 
         buttonGroup1.add(btnsajtkrem);
@@ -339,11 +336,11 @@ public class Pizzarendeles extends javax.swing.JFrame {
      
         else{
             cim = "Köszönjük!";
-            uzenet = "Rendelését felvettük!";
+            String osszeg = "A pizza 2499 Ft-ba kerül!";
+            uzenet = "Rendelését felvettük!"+"\n" + osszeg ;
             int ikontipus = JOptionPane.INFORMATION_MESSAGE;
             JOptionPane.showMessageDialog(null, uzenet, cim, ikontipus);
         }
-        
     }//GEN-LAST:event_btnrendelesActionPerformed
 
     /**
